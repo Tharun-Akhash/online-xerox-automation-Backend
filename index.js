@@ -28,6 +28,7 @@ const corsOptions = {
       'http://localhost:3000',
       'http://localhost:5173',
       'http://localhost:5174',
+      'https://xeroxautomation.netlify.app',
       process.env.CLIENT_URL
     ].filter(Boolean);
 
