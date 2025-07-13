@@ -20,13 +20,15 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 app.use(cookieParser());
 
 const corsOptions = {
-  origin: '*', // ✅ Allow all origins
+  origin: 'https://xeroxautomation.netlify.app', // ✅ Use your actual frontend domain
+  credentials: true, // ✅ Allow cookies/auth headers
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // ✅ VERY IMPORTANT: Handles preflight
+app.options('*', cors(corsOptions)); // ✅ Handle preflight
+
 
 // app.options('*', cors(corsOptions)); // ✅ This handles the CORS preflight properly
 
