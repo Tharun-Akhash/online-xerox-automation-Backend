@@ -45,7 +45,7 @@ app.use(cookieParser());
 // app.use(cors(corsOptions));/
 
 app.use(cors());
-app.options('*', cors(corsOptions)); // ✅ This handles the CORS preflight properly
+// app.options('*', cors(corsOptions)); // ✅ This handles the CORS preflight properly
 
 // ✅ Logging
 if (process.env.NODE_ENV === 'development') {
